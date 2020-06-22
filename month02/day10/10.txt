@@ -1,0 +1,83 @@
+前情回顾
+
+1. 事务控制
+
+   事务 ：一件事情的执行过程　
+
+   begin     commit    rollback
+
+   原子性    一致性    隔离性   持久性
+
+   隔离级别 ：  读未提交  读已提交  可重复读   串行化
+
+2. 数据库的优化
+
+   数据库范式
+
+   引擎的选择
+
+   字段的选择和键的设置
+
+   sql语句的优化
+
+   表的拆分
+
+3. 数据库备份
+
+   create table  [表名] select.....
+   mysqldump
+
+   如何远程登录数据库
+
+   创建新用户
+   create user
+   drop user
+
+   权限的设置
+   grant
+   revoke
+
+4. pymysql
+
+   *  操作数据库流程
+
+      db = pymysql.connect()
+      cur = db.concur()
+
+      cur.execute()
+
+      cur.fetchone()  cur.fetchmany() cur.fetchall()
+
+      db.commit()  db.rollback()
+
+      cur.close()
+      db.close()
+
+数据管理：
+
+文件处理
+   文件读写  ： open（） read() write()    重点
+   正则表达式技术 ： re模块
+
+数据库处理
+   mysql数据库使用   重点
+   pymysql模块
+
+思考： 如何让客户端能够循环发送内容，接收Thanks
+
+作业 ：
+使用udp套接字完成
+
+客户端可以循环输入单词，得到单词的解释
+
+* 单词使用数据库查询 dict
+* 数据库与服务端程序在一起的
+
+思路 :  客户端 --》 发送给服务端 --》服务端通过数据库查询 -》将解释发送个客户端展示
+
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+前情回顾
+
+1. 表的关联查询
+
+   内连接   tb1 inner join tb2 on [筛选条件]
+           select .. from tb1,tb2 where 筛选条件
+
+   外连接：  左连接   tb1 left join tb2 on [筛选条件]
+            右连接   tb1 right join tb2 on [筛选条件]
+
+
+2. 视图
+
+   作用 ： 简化复杂的查询，获取部分数据，数据结构清晰，更加安全
+
+   create [or replace] view [view_name] as [select...]
+
+   drop view [if exists] [view]
+
+3. 函数和存储过程
+
+   函数 ： 有返回值   获取一个结果
+   存储过程 ： 没有返回值    注重执行过程和功能
+
+   delimiter  xx；
+
+   create function func(uid int,...)
+   returns [return_type]
+   begin
+     declare a int;
+     函数体
+     return ...；
+   end$$
+
+   create procedure proc(in uid int,...)
+   begin
+     declare a int;
+     函数体
+   end$$
+
+   drop function/procedure [name]
+
+mysql 数据库总结
+
+1. 基础必熟： 数据库数据表的创建
+            mysql数据类型
+            增删该查查询
+            高级查询语句
+
+2. 核心掌控： 聚合操作
+            索引操作
+            外键创建
+            表关系设计
+            关联查询
+
+3. 知道应试： 视图
+            函数 存储过程
+            事务
+            数据库优化方法
+
+4. 实操情景： 数据库数据表的备份
+            用户创建，权限管理
+            数据库基础概念
+
+
+练习1：cls表 写一个代码，input输入学生姓名，
+获取该姓名学生的姓名和分数信息
+
+作业： 1. 将dict.txt中点单词存入到数据库
+         创建一个数据库  dict
+         创建数据表     words  字段： id   word   mean
+         将单词本中单词插入到这个数据表
+
+      2. 熟练今天的语句，补充数据库结构图
+
+
+
+
+
+
