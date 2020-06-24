@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>单选和多选</title>
+</head>
+<body>
+<form action="">
+    <div>
+        班级: 
+        <label for="2002">
+            <input type="radio" name="classname" id="2002" value="2002">2002
+            </label>
+            <input type="radio" name="classname" id="" value="2003">2003
+            <input type="radio" name="classname" id="" checked value="2004">2004
+    </div>
+    <div>
+        选项:
+        <input type="checkbox" name="option" id="" value="A">A
+        <input type="checkbox" name="option" id="" value="B" checked>B
+        <input type="checkbox" name="option" id="" value="C">C
+        <input type="checkbox" name="option" id="" value="D">D
+    </div>
+    <div>
+        学校地区:
+        <select name="address" id="">
+            <option value="0">先选择</option>
+            <option value="1" selected>北京总部</option>
+            <option value="2" >上海分区</option>
+        </select>
+    </div>
+    <input type="submit">
+</form>    
+</body>
+</html>
