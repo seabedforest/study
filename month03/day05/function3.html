@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    // window对象提供了一个onload事件  页面元素加载完成时会触发onload
+    window.onload=function(){
+        var btn=document.getElementById('btn');
+        console.log(btn);
+        btn.onclick=function(){
+       alert('这是个登录框');
+   }
+    }
+    </script>
+</head>
+<body>
+     <button id="btn" onclick="">登录</button>
+</body>
+</html>

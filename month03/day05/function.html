@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>function</title>
+</head>
+<body>
+    <script>
+    function fun(name) {
+        alert('hello world '+name);
+    }
+    fun('dachui');
+    fun();  //形参不传值时 默认为undefined
+
+    function than(a,b) {
+        if (a>b) {
+            return a;
+        } else {
+            return b;
+        }
+        // return a>b?a:b;
+    }
+    alert(than(10,14))
+    </script> 
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>匿名函数2</title>
+</head>
+<body>
+   <button id="btn" onclick="">登录</button>
+   <script>
+    //通过ID属性查找页面元素
+    var btn=document.getElementById('btn');
+    console.log(btn);
+    // 可以通过对象.属性的方式获取属性
+    console.log(btn.id);
+    // 为事件绑定一个处理函数  onclick=function
+    btn.onclick=function(){
+       alert('这是个登录框');
+   }
+    //js是单线程语言  但是浏览器支持多线程
+    //浏览器在运行js代码时 会有一个主线程执行代码 有辅助线程负责监听事件
+    // 辅助线程监听事件触发后 如果定义了事件处理函数
+    // 会把事件放到消息队列 等待主线程来执行 
+   </script> 
+</body>
+</html>
