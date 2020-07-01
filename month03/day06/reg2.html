@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>正则表达式练习</title>
+    <style>
+    p>span{
+        color: red;
+    }
+    </style>
+</head>
+<body>
+    <input type="text" id="key">
+    <button id="btn">查找</button>
+    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Id accusantium iure quaerat facilis eaque dicta ea at earum consectetur nisi fugiat repudiandae tenetur, dolore voluptate sit illo ab minus deserunt.
+    </p>
+
+    <script>
+    var key=document.getElementById('key');
+    var btn=document.getElementById('btn');
+    var p1=document.getElementsByTagName('p')[0];
+    btn.onclick=function(){
+        var reg = new RegExp(key.value,'ig');;
+        var str = p1.innerText;
+        if (reg.test(str)){
+            var text =str.replace(reg,`<span>${key.value}</span>`);
+            p1.innerHTML=text;
+        }else{
+            alert("没找查询的内容");
+        }        
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自定义对象</title>
+</head>
+<body>
+   <script>
+   var obj ={name:"wangyi",age:18};
+   console.log(obj);
+   console.log(obj.name);
+   console.log(obj['age']);
+   obj.name='haha';
+   console.log(obj);
+   for(var i in obj){
+       console.log(i); //索引值（属性名)
+       console.log(obj[i]); //值
+   }
+   </script> 
+</body>
+</html>

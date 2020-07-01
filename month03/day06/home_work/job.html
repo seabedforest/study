@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>随机图片</title>
+</head>
+<body>
+    <table>
+        <tr></tr>
+        <td><img src="../imgs/bk0-8.jpg" alt=""></td>
+        <td><img src="../imgs/bk1-8.jpg" alt=""></td>
+        <td><img src="../imgs/bk2-8.jpg" alt=""></td>
+        <td><img src="../imgs/bk3-8.jpg" alt=""></td>
+        <td><img src="../imgs/bk4-8.jpg" alt=""></td>
+    </table>
+
+    <script>
+    // 随机生成0~9的数字
+    // num=Math.floor(Math.random()*10);
+    var items=document.getElementsByTagName("img");
+    for(var i=0;i<items.length;i++){
+        var num=Math.floor(Math.random()*10);
+        let url=`../imgs/bk${num}-8.jpg`;
+        console.log(url);
+        items[i].setAttribute('src',url);
+    }
+    </script>
+</body>
+</html>
