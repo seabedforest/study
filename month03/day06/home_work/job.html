@@ -19,13 +19,30 @@
     <script>
     // 随机生成0~9的数字
     // num=Math.floor(Math.random()*10);
+    var randomArr=[]
+    while (true) {
+        var i=Math.floor(Math.random()*10)
+        if(randomArr.indexOf(i) == -1){
+            randomArr.push(i);
+        }
+        if(randomArr.length==5){
+            break;
+        }
+    }
+
     var items=document.getElementsByTagName("img");
-    for(var i=0;i<items.length;i++){
-        var num=Math.floor(Math.random()*10);
-        let url=`../imgs/bk${num}-8.jpg`;
-        console.log(url);
+
+    for(var i in randomArr){
+        let url=`../imgs/bk${randomArr[i]}-8.jpg`;
         items[i].setAttribute('src',url);
     }
+
+    // for(var i=0;i<items.length;i++){
+    //     var num=Math.floor(Math.random()*10);
+    //     let url=`../imgs/bk${num}-8.jpg`;
+    //     console.log(url);
+    //     items[i].setAttribute('src',url);
+    // }
     </script>
 </body>
 </html>
