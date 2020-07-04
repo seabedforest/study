@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单元素属性操作</title>
+</head>
+<body>
+    <form action="" onsubmit="return checkForm()">
+        手机号: <input type="text">
+        <div>
+            <input type="checkbox" id="canSubmit">阅读并接收协议
+        </div>
+        <!-- 在form标签中写的button按钮默认是提交按钮 -->
+        <button>提交</button>
+    </form>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+    function checkBox(){
+        // 判断checkbox的属性 checked
+        // 如果有 表示选中  没有 表示未选中
+        return $('#canSubmit').prop('checkbox')
+    }
+    //校验表单是否能提交数据的函数
+    function checkForm(){
+        return checkBox();
+    }
+    </script>
+</body>
+</html>

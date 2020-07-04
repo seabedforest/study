@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>设置元素属性</title>
+</head>
+<body>
+    <h1 id="title"></h1>
+    <button id="btn">click me</button>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+    // $('#title').attr('id','Title');
+    $('#btn').click(function(){
+        //将h1的id属性放在页面上显示
+        $('#title').html($('#title').attr('id'));
+    })
+    </script>
+</body>
+</html>
