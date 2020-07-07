@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>遍历数据</title>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            alert('hello 1');
+        })
+    </script>
 </head>
 <body>
     <ul>
@@ -14,5 +20,28 @@
         <li>item4</li>
         <li>item5</li>
     </ul>
+    <script>
+        $(function(){
+            alert('hello 2');
+        })
+    </script>
+    <script>
+    //遍历数据
+    var arr=[1,2,3,4,5];
+    var qtx={name:'qtx',age:18};
+    $.each(qtx,function(i,obj){
+        console.log(i,obj);
+    })
+
+    $.each(arr,function(i,obj){
+        console.log(i,obj);
+    })
+
+    //遍历页面元素
+    $('li').each(function(index,obj){
+        console.log($(obj));
+        console.log($(obj).html());
+    })
+    </script>
 </body>
 </html>

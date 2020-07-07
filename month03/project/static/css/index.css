@@ -1,16 +1,16 @@
-/* 初始化页面样式 去掉元素的默认样式 */
-ul,li,h1,h2,h3,h4,h5,h6,p{
+/* 初始化页面样式  去掉元素的默认样式 */
+body,ul,ol,li,h1,h2,h3,p{
     margin: 0;
     padding: 0;
 }
 ul,ol{
-    list-style: none;   /*去掉列表默认样式*/
+    list-style: none;/*去掉列表默认样式*/
 }
 a{
-    text-decoration: none; /* 去掉下划线*/
+    text-decoration: none;/*去掉下划线*/
 }
 
-/*header部分*/
+/* header部分 */
 header{
     width: 100%;
     background-color: #555;
@@ -20,38 +20,50 @@ header{
 }
 /* 导航条部分 */
 nav{
-    width: 1560px;
+    width: 1140px;
     height: 80px;
     margin: 0 auto;
     position: relative;
 }
 
 /* logo文字 */
+/* 
+    h1
+    能和其他元素并排显示
+    字体垂直居中
+    字体大小26px
+    距离右侧元素80px
+    h1 a
+    字体颜色 #c1edf2
+*/
 header nav h1{
     float: left;
-    font-size: 26px;
     line-height: 80px;
+    font-size: 26px;
     margin-right: 80px;
 }
 header nav h1 a{
-    color: #c1edf2;
+    color:#c1edf2;
 }
-
 /* 导航菜单 */
+/* 实现导航菜单 水平排列  垂直居中 */
+/* ul li a  字体颜色  #e5f2f2 */
+/* 超链接鼠标移入变成白色 */
 header nav ul li{
     float: left;
-    line-height: 80px;    
-    /* margin-right: 50px; */
+    line-height: 80px;
     padding: 0 20px;
 }
 header nav ul li a{
     color: #e5f2f2;
 }
 header nav ul li a:hover{
-    color: #fff;
+    color:#fff;
 }
 
 /* 登录注册 */
+/* 绝对定位  相对nav调整位置 */
+/* 登录距离nav右侧70px    注册距离nav右侧0px */
 header nav div a{
     position: absolute;
     line-height: 80px;
@@ -64,18 +76,25 @@ header nav div a{
     right: 0px;
 }
 
+/* 主体样式 */
+/* header{
+    top:0
+} */
 main{
-    width: 1560px;
-    margin:100px auto 0;
+    width: 1140px;
+    /* 为header的固定定位留出空间 */
+    margin: 100px auto 0;
 }
-main div.banner{
+/* .banner 占父元素的66% */
+/* 实现页面效果 */
+.banner{
     width: 66%;
     float: left;
 }
 .fader{
     position: relative;
     width: 100%;
-    /* padding-top: 60%;     */
+    /* padding-top:60% ; */
 }
 .fader .slide{
     width: 100%;
@@ -85,21 +104,21 @@ main div.banner{
     width: 100%;
     height: 100%;
 }
-.fader .slide .imginfoo{
+/* 15:57~16:10  */
+.fader .slide .imginfo{
     width: 100%;
-    position:absolute;
-    bottom: 0px;
+    position: absolute;
+    bottom:12%;
     color: #fff;
     font-size: 26px;
     background-color: rgba(0,0,0,0.4);
-    padding-left: 40px;
+    padding-left:40px;
     box-sizing: border-box;
 }
 
-.fader .fader_controls div{
+.fader  .fader_controls div{
     position: absolute;
     top:50%;
-    /* left: 50px; */
     width: 50px;
     height: 80px;
     text-align: center;
@@ -108,8 +127,14 @@ main div.banner{
     margin-top: -40px;
     color: #fff;
     cursor: pointer;
-    opacity: 0;
+    opacity: 0;/*隐藏*/
     transition: all 0.2s;
+}
+.prev{
+    left: 50px;
+}
+.next{
+    right: 50px;
 }
 .banner:hover .fader_controls .prev{
     opacity: 0.7;
@@ -119,9 +144,6 @@ main div.banner{
     opacity: 0.7;
     right: 0;
 }
-.fader .fader_controls div.next{
-    right: 50px;
-}
 
 /* 轮播图页标 */
 .pager_list{
@@ -130,6 +152,7 @@ main div.banner{
     height: 40px;
     line-height: 40px;
     bottom: 0;
+    /* 文本居中   对行内块也有效 */
     text-align: center;
 }
 .pager_list li{
@@ -146,12 +169,51 @@ main div.banner{
     opacity: 1;
 }
 
-/* 右侧图片toppic */
+
+/* 右侧 toppic图片 */
 .toppic{
     width: 32%;
     float: right;
 }
-/* 为toppic设置半透明效果 */
+.toppic li{
+    width: 100%;
+    position: relative;
+    /* 实现半透明效果 */
+    background-color: #000;
+}
+.toppic li:last-child{
+    margin-top: 22px;
+}
+.toppic li img{
+    width: 100%;
+    height: 200px;
+    display: block;
+}
+.toppic li div{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+    padding: 10px 20px;
+}
+/* 16:52~17:10 */
+.toppic li span{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+    padding: 6px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+/* 为toppic的图片设置半透明效果 */
+/* .toppic li{
+    background-color: #000;
+} */
 .toppic li i{
     display: block;
     opacity: 0.7;
@@ -160,32 +222,122 @@ main div.banner{
 .toppic li i:hover{
     opacity: 1;
 }
-.toppic li{
-    width: 100%;
-    position: relative;
+
+/* blank */
+body{
+    background-color: #f2f2f0;
 }
-.toppic li:last-child{
+.blank{
+    clear: both;
+    height: 20px;
+}
+/* .blogsbox{
+    width: 100%;
+    height: 100px;
+    border: 5px solid red;
+} */
+/* 每一条博客样式 */
+.blogs{
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    overflow: hidden;/*解决子元素浮动效果*/
+}
+/* 博客标题 */
+/* 
+    h3  字体大小20px  距离下方元素10px
+    h3 a   字体颜色 #555   鼠标移入时字体颜色变成#337ab7
+*/
+.blogtitle{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.blogtitle a{
+    color: #555;
+}
+.blogtitle a:hover{
+    color: #337ab7;
+}
+/* 博客图片 */
+/* 
+    .blogpic  浮动  设置宽度30%    设置高度170px  距离右侧元素20px
+    .blogpic img  宽度占父元素100%
+*/
+
+.blogpic{
+    float: left;
+    width: 30%;
+    height: 170px;
+    margin-right: 20px;
+    overflow: hidden;/*解决子元素溢出问题*/
+}
+.blogpic img {
+    width: 100%;
+    transition: all 0.5s;
+}
+/* 鼠标移入时 放大图片 */
+.blogpic:hover img{
+    /* 缩放 默认值1表示等比例   可以调整元素大小 */
+    /* 大于1  放大元素    小于1   缩小元素*/
+    transform: scale(1.1);
+}
+
+/* 博客文字 */
+.blogtext{
+    font-size: 14px;
+    color: #566573;
+    margin-top :20px;
+}
+/* 博客信息列表 */
+
+/* 让li横向排列    为所有的li设置背景图片auicon.jpg  */
+/* 为li设置左内边距  让文字不要覆盖背景图 */
+/* 调整所有li的背景图片偏移属性 显示不同的图片 */
+/* li a 字体颜色#748594    鼠标移入时字体颜色变成黑色*/
+.bloginfo{
+    overflow: hidden;
     margin-top: 30px;
 }
-.toppic li img{
+.bloginfo li{
+    float: left;
+    background:url('../images/auicon.jpg') no-repeat;
+    padding-left:20px ;
+    margin-right: 15px;
+    font-size: 12px;
+    height: 18px;
+    line-height: 18px;
+}
+/* 为所有li设置不同的偏移属性 */
+.bloginfo li.lnname{
+    background-position-y:-24px;
+}
+.bloginfo li.timer{
+    background-position-y:-45px;
+}
+.bloginfo li.view{
+    background-position-y:-65px;
+}
+.bloginfo li.like{
+    background-position-y:-85px;
+}
+.bloginfo li a{
+    color: #748594;
+}
+.bloginfo li a:hover{
+    color: #000;
+}
+
+/* 页脚样式 */
+footer{
     width: 100%;
-    height: 270px;
-    display: block;
+    padding: 20px 0;
+    background-color: #333;
+    color: #a5a4a4;
+    text-align: center;
 }
-.toppic li div{
-    position:absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    color: #fff;
-    background-color: rgba(0,0,0,0.7);
-    padding: 10px,20px;
+footer a{
+    color: #a5a4a4;
 }
-.toppic li span{
-    position:absolute;
-    top: 20px;
-    left: 20px;
-    color: #fff;
-    background-color: rgba(0,0,0,0.7);
-    padding: 0%;
+footer a:hover{
+    color: #c1edf2;
 }
