@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人博客-首页</title>
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../static/css/easyfader.css">
+    <!-- 引入js文件 -->
+    <script src="../static/js/jquery.min.js"></script>
+    <!-- 依赖于jQuery页面插件 实现图片轮播功能 -->
+    <script src="../static/js/jquery.easyfader.min.js"></script>
+    <!-- 获取轮播图的 图片和描述文字 -->
+    <script src="../static/js/fader.data.js"></script>
+    <!-- 获取博客信息 -->
+    <script src="../static/js/blogs.data.js"></script>
+    <!-- 自定义JS文件 -->
+    <script src="../static/js/index.js"></script>
+</head>
+<body>
+    <!-- <div id="header"></div> -->
+    <header>
+        <nav>
+            <!-- logo文字 -->
+            <h1><a href="#">个人博客</a></h1>
+            <!-- 导航菜单 ul>li*6>a -->
+            <ul>
+                <li><a href="#">网站首页</a></li>
+                <li><a href="#">文章列表</a></li>
+                <li><a href="#">我的相册</a></li>
+                <li><a href="#">留言</a></li>
+                <li><a href="#">关于我</a></li>
+                <li><a href="#">发表博客</a></li>
+            </ul>
+            <!-- 登录注册 -->
+            <div>
+                <a id="login" href="#">登录</a>
+                <a id="register" href="#">注册</a>
+            </div>
+        </nav>
+    </header>
+    <!-- <div id="main"></div> -->
+    <main>
+        <div>
+            <div class="banner">
+                    <ul id="fader" class="fader">
+                    </ul>
+            </div>
+            <ul class="toppic">
+                <li>
+                    <a href="#">
+                        <i><img src="../static/images/toppic01.jpg" alt=""></i>
+                    </a>
+                    <div>linux升级py3,安装pip,svn</div>
+                    <span>Linux</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i><img src="../static/images/toppic02.jpg" alt=""></i>
+                    </a>
+                    <div>精通Python编程——python深入浅出教程</div>
+                    <span>python</span>
+                </li>
+            </ul>
+        </div>
+        <!-- blank清除上方浮动的影响  同时调整距离 -->
+        <div class="blank"></div>
+        <!--blogsbox 显示所有博客 -->
+        <div class="blogsbox">
+
+        </div>
+        
+    </main>
+    <!-- <div id="footer"></div> -->
+    <footer>
+        <div>Desgin body
+            <a href="#">个人博客</a>
+            <a href="#">备XXXXXXXXXXXXXXXX号-1</a>
+        </div>
+    </footer>
+</body>
+</html>

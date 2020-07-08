@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text">
+    <button id="btn">click me</button>
+    <h1 id='show'></h1>
+    <!-- 导入外部文件 -->
+    <script src="../js/jquery.min.js"></script>
+    <script>
+    var text=$('#text');
+    console.log(text);
+    var btn=$('#btn');
+    var show=$('#show');
+    btn.click(function(){
+        // show.html(text.val()).css('color','red').css('font-weight','normal');
+        show.html(text.val()).css({
+            'color':'red',
+            'font-weight':'normal',
+        })
+    })
+    </script>
+    <!-- <script>
+    function $$(id) {
+        return document.getElementById(id);
+    }
+    var text=$$('text');
+    var btn=$$('btn');
+    var show=$$('show');
+    btn.onclick=function(){
+        show.innerHTML=text.value;
+    }
+    </script> -->
+</body>
+</html>

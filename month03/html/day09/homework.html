@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>级联下拉菜单</title>
+</head>
+<body>
+    <div>
+        <select name="" id="prov"></select>
+        <select name="" id="city"></select>
+        <select name="" id="area"></select>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/data.js"></script>
+    <script>
+    console.log(data);
+    // 初始化页面结构
+    $('#prov').html('<option value="0">请选择</option>');
+    $('#city').html('<option value="0">请选择</option>');
+    $('#area').html('<option value="0">请选择</option>');
+
+    // 显示省份
+    $.each(data,function(i,obj){
+        $('#prov').append(`<option value="${obj.provId}">${obj.provname}</option>`);
+    })
+    // 为省份绑定事件 选择省份后生成对应的城市
+    // change 省份发生变化时再去加载对应的城市
+    $('#prov').change(function(){
+        $.each(data,function(i,obj){
+            if(obj.provId==$('#prov').val()){
+                // 初始化城市菜单
+                $('#city').html('<option value="0">请选择</option>'); 
+                $.each(obj.citys,function(i,obj2){
+                    $('#city').append(`<option value="${obj2.cityId}">${obj2.cityname}</option>`);
+                })
+            }
+        })
+        // 省份请选择时  城市菜单初始化
+        if($('#prov').val() == 0){
+            $('#city').html('<option value="0">请选择</option>');
+        }
+        // 城市菜单初始化后  地区也跟着初始化
+        if($('#city').val() == 0){
+            $('#area').html('<option value="0">请选择</option>');
+        }
+        
+    })
+
+    //为城市绑定事件   选择城市后生成对应的地区
+    $('#city').change(function(){
+        $.each(data,function(i,obj){
+            if(obj.provId==$('#prov').val()){
+                $.each(obj.citys,function(i,obj2){
+                    if(obj2.cityId == $('#city').val()){
+                        $('#area').html('<option value="0">请选择</option>');
+                        $.each(obj2.areas,function(i,obj3){
+                            $("#area").append(`<option value="${obj3.areaId}">${obj3.areaname}</option>`)
+                        })
+                    }
+                })
+            }
+        })
+        // 当用户点击请选择时   初始化地区的下拉菜单
+        if($('#city').val() == 0){
+            $('#area').html('<option value="0">请选择</option>');
+        }
+    })
+    </script>
+</body>
+</html>

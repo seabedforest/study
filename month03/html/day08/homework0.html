@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul,li{
+            padding: 0;
+            margin: 0;
+            /* 清除列表样式(去掉小黑点) */
+            list-style: none;
+        }
+        ul{
+            border: 1px solid red;
+        }
+        li{
+            display: inline-block;
+        }
+        .first{
+            color: #aaa;
+            margin: 10px;
+        }
+        .item{
+            margin: 10px 15px;
+            padding: 0 3px;
+            transition: all 0.5s;
+        }
+        .active{
+            background-color: #f00;
+            color: #fff;
+        }
+        .item:hover{
+            background-color: #f00;
+            color: #fff;
+            cursor: pointer;/*修改鼠标指针样式*/
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="first">难度:</li>
+        <li class="item">全部</li>
+        <li class="item">初级</li>
+        <li class="item active">中级</li>
+        <li class="item">高级</li>
+    </ul>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+    $('.item').click(function(){
+        // $(this).addClass('item active').siblings().removeClass('active');
+        $(this).toggleClass('active');
+    })
+    </script>
+    <!-- <script>
+        var items = document.getElementsByClassName('item');
+        for(var i = 0;i<items.length;i++){
+            items[i].onclick = function(){
+                for(var j = 0;j<items.length;j++){
+                    // li class= 'item'
+                    items[j].setAttribute('class','item')
+                }
+                // li class='item active'
+                this.setAttribute('class','item active')
+            }
+        }
+    </script> -->
+</body>
+</html>

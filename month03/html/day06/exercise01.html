@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>挑战级别升级版</title>
+    <style>
+    ul,li{
+        padding: 0;
+        margin: 0;
+        /* 清除列表样式 */
+        list-style: none;        
+    }
+    li{
+        display: inline-block;
+        margin: 10px 20px;
+    }
+    .first{
+        color:#666;
+        margin: 10px;
+    }
+    .active{
+        cursor:pointer; 
+    }
+    .item:hover{
+        color: red;
+    }
+    </style>
+</head>
+<body>
+  <ul>
+      <li class="first">难度:</li>
+      <li class="item">全部</li>
+      <li class="item">初级</li>
+      <li class="item active">中级</li>
+      <li class="item">高级</li>
+  </ul> 
+  <script>
+  var items=document.getElementsByClassName('item');
+  for(let i=0;i<items.length;i++){
+    items[i].onclick=function(){
+        // this 指当前触发事件的对象
+        alert(this.innerText)
+    }  
+  }
+// let和for循环配合使用时 i只在for循环中使用 而且i的值可以被内部函数保留  
+//   for(let i=0;i<items.length;i++){
+//       items[i].onclick=function(){
+//           switch (i) {
+//                 case 0:
+//                   alert('全部');
+//                   break;              
+//                 case 1:
+//                   alert('初级');
+//                   break;
+//                 case 2:
+//                   alert('中级');
+//                   break;
+//                 case 3:
+//                   alert('高级');
+//                   break;
+//                 default:
+//                   break;
+//           }
+//       }
+//   }
+  </script> 
+
+
+    <input type="button" value="按钮" id="btn">
+    <div id="dv">这是一个div</div>
+    <script>
+        console.log(document.getElementById("btn"));
+        document.getElementById("btn").onclick = function () {
+            var text = document.getElementById("dv").innerText;
+            console.log(text);
+        };
+    </script>
+</body>
+</html>

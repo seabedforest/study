@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>字符串练习</title>
+</head>
+<body>
+    邮箱： <input type="text"  id="email">
+    <button id="btn">解析</button>
+    <div id="show"></div>
+    <script>
+    var email = document.getElementById('email')
+    var btn = document.getElementById('btn')
+    var show = document.getElementById('show')
+    btn.onclick=function(){
+        var data=email.value.split("@")
+        // show.innerHTML=`用户名${data[0]} 服务商${data[1]}`
+        show.innerHTML=`
+                        <table>
+                            <tr></tr>
+                            <td>用户名</td>
+                            <td>${data[0]}</td>
+                            <tr></tr>
+                            <td>服务商</td>
+                            <td>${data[1]}</td>
+                        </table>`
+    }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>排序</title>
+</head>
+<body>
+    <script>
+    var arr=[17, 2, 26, 3, 33, 33, 4, 41, 45, 5]
+    // 自定义升序
+    function sortAsc(a,b){
+        return a-b;
+    }
+    arr.sort(sortAsc);
+    console.log(arr);
+
+    // 自定义降序
+    function sortDesc(a,b){
+        return b-a;
+    }
+    arr.sort(sortDesc);
+    console.log(arr);
+    </script>
+</body>
+</html>

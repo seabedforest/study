@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>鼠标划过时状态</title>
+    <style>
+    .div1{
+        width: 500px;
+        height: 280px;
+        background-image: url("../day01/bb.gif");
+        /* 全部样式 发生改变时 改变的样式在0.5秒后再改变 */
+        transition: all 0.5s;
+    }
+    /* 伪类选择器 :hover 设置鼠标滑过时的状态*/
+    .div1:hover{
+        background-image: url("./11.gif");
+    }
+    /* 伪类选择器 :active 设置鼠标点中不抬起的状态 */
+    .div1:active{
+        background-image: url("../day01/ee.jpg"); 
+    }
+    </style>
+</head>
+<body>
+ <div class="div1"></div>   
+</body>
+</html>

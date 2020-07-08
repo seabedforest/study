@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS复杂选择器</title>
+    <style>
+    /* 初始化页面样式，去除元素的默认距离*/
+    body,ul,li,p,h1,h2{
+        margin: 0;
+        padding: 0;
+    }
+    /* ul{
+        color: greenyellow;
+        background-color: red
+    } */
+    ul li{
+        color: hsl(253, 100%, 50%);
+        border: 1px solid red;
+        font-size: 30px;
+        background-size:30px;
+        background-image: url("./11.gif");
+    }
+    /* ol>li{
+        color: green;
+    } */
+    </style>
+</head>
+<body>
+<ul>
+    <li>
+    水浒传   
+    <ol>
+        <li>林冲</li>
+        <li>武松</li>
+        <li>潘金莲</li>
+    </ol>
+    </li>
+    <li>看</li>
+    <li>够</li>
+    <li>了</li>
+    <li>吗</li>
+</ul>    
+</body>
+</html>

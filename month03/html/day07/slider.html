@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        #fader{
+            width: 739px;
+            height: 419px;
+            margin: 0 auto;
+            position: relative;
+        }
+        #fader>img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+        #fader>img.active{
+            /* z-index: 5; */
+            opacity: 1;
+        }
+        #faderCon img{
+            position: absolute;
+            top: 50%;
+            margin-top:-20px;
+        }
+        #faderCon img.rr{
+            right: 0;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var items = document.getElementsByClassName('item');
+            var ll = document.getElementsByClassName('ll')[0];
+            var rr = document.getElementsByClassName('rr')[0];
+            
+            var i = 0;
+            rr.onclick = function(){
+                // 点击右侧图标时  隐藏当前图片
+                items[i].className='item';
+                i++;
+                if(i==items.length){
+                    i=0;
+                }
+                // 显示下一张图片
+                items[i].className='item active';
+            }
+        
+            ll.onclick = function(){
+                // 点击左侧图标时  隐藏当前图片
+                items[i].className='item';
+                i--;
+                if(i==-1){
+                    i=items.length-1;
+                }
+                // 显示下一张图片
+                items[i].className='item active';
+            }
+            
+            //设置周期性定时器 实现自动切换图片
+            var autoMv=setInterval(rr.onclick,1500);
+            //如果鼠标停在图片上或停在左右小图片时  停止定时器 移出时开始定时器
+            // ll.onmouseover
+            // ll.onmouseout
+            var div=document.getElementById('fader');
+            div.onmouseover=function(){
+                clearInterval(autoMv);
+            }
+            div.onmouseout=function(){
+                autoMv=setInterval(rr.onclick,1500);
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <!-- 样式要求1. 将fader下的图片定位到一起 只显示gm1-6.jpg -->
+    <!-- 样式要求2. 显示左右图片ll rr -->
+    <!-- ll靠轮播图的左侧显示 垂直居中 -->
+    <!-- rr靠轮播图的右侧显示 垂直居中 -->
+    <div id="fader">
+        <img class="item active" src="../day06/imgs/gm1-6.jpg" alt="">
+        <img class="item" src="../day06/imgs/gm2-6.jpg" alt="">
+        <img class="item" src="../day06/imgs/gm3-6.jpg" alt="">
+        <img class="item" src="../day06/imgs/gm4-6.jpg" alt="">
+        <img class="item" src="../day06/imgs/gm5-6.jpg" alt="">
+        <div id="faderCon">
+            <img class="ll" src="../day06/imgs/l1-6.png" alt="">
+            <img class="rr" src="../day06/imgs/r1-6.png" alt="">
+        </div>
+    </div>
+</body>
+</html>

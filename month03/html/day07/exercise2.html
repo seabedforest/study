@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #dream{
+        width: 500px;
+        height:100px;
+        background-color: red;
+        position: fixed;
+        left: -500px;
+        top: 0;
+        transition: all 2s;
+        color: #fff;
+        text-align: center;
+        line-height: 100px;
+    }
+    </style>
+</head>
+<body>
+    <div id="dream">我又回来了</div>
+    <script>
+    // var timeer=setTimeout(function(){
+    //     var dream=document.getElementById('dream');
+    //     dream.style='bottom:0px';
+    // },3000);
+
+    // dream.onclick=function(){
+    //     this.style='bottom:-300px';
+    //     var timer=setTimeout(function(){
+    //         dream.style='bottom:0';
+    //     },5000)
+    // }
+
+    var timeer=setInterval(function(){
+        var dream=document.getElementById('dream');
+        dream.style='left:0px';
+    },2000);
+
+    var timeer1=setInterval(function(){
+        var dream=document.getElementById('dream');
+        dream.style='left:-500px';
+    },4000);
+    </script>
+</body>
+</html>

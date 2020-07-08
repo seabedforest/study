@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户信息</title>
+</head>
+<body>
+    姓名: <input type="text" id="uname">
+    年龄: <input type="text" id="age">
+    <button id="btn">保存</button>
+    <div id="show"></div>
+    <script>
+    var uname = document.getElementById('uname');
+    var age = document.getElementById('age');
+    var btn = document.getElementById('btn');
+    var show=document.getElementById('show');
+    btn.onclick=function(){
+        // show.innerText=uname.value+"今年"+age.value+"啦";
+        show.innerHTML='<h1>'+uname.value+"今年"+age.value+"啦"+'<h1>';
+        // 反引号格式化
+        show.innerHTML=`<h1>${uname.value}今年${age.value}啦<h1>`;
+    }
+    </script>
+</body>
+</html>
