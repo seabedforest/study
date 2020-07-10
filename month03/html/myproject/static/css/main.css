@@ -1,0 +1,793 @@
+/*通用初始化样式*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}
+abbr,acronym{border:0;font-variant:normal}
+sup{vertical-align:text-top}
+a{text-decoration:none}
+sub{vertical-align:text-bottom}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}
+input,textarea,select{*font-size:100%}
+body{padding-top:42px;}
+html,body .ost_box{min-width:1200px;}
+.wrapper{position:relative;*zoom:1;margin:0 auto;overflow:hidden;}
+body,button,select,textarea,input {font-family:'\5FAE\8F6F\96C5\9ED1', Tahoma, SimSun, Verdana;}
+.clearfix:after{clear:both;display:block;visibility:hidden;height:0;content:" ";font-size:0}.clearfix{*zoom:1}
+.fl{float:left;_display:inline;}
+.fr{float:right;_display:inline;}
+/***底部***/
+#gfooter{background-color: #232122;}
+#gfooter .foot{width:1200px;position:relative;}
+#gfooter .foot_dark{background-color: #232122;color:#bdbec0;}
+#gfooter .foot_dark a{color:#bdbec0;}
+#gfooter .foot_left.logo-smilegate{width:162px;height:38px;background:url(//game.gtimg.cn/images/fz/web201812/smilegate2.png) no-repeat;}
+
+.wrapper{width:100%;position:relative;overflow:hidden;}
+.wrapper .la-wrap{width:100%;height:1080px;margin: 0 auto;position: relative;overflow: hidden;direction: ltr;-webkit-backface-visibility: hidden;-moz-backface-visibility: hidden;-ms-backface-visibility: hidden;-o-backface-visibility: hidden;backface-visibility: hidden;z-index: 1;}
+/*雪碧图*/
+.spr {background-repeat: no-repeat;background-image:url(//game.gtimg.cn/images/fz/web201812/spr.png);}
+.m-left {width:46px; height:78px; background-position: -1592px -91px}
+.m-right {width:46px; height:78px; background-position: -1526px -91px}
+.name-role1 {width:351px; height:167px; background-position: -1051px -16px}
+.name-role2 {width:314px; height:167px; background-position: -412px -20px}
+.name-role3 {width:285px; height:167px; background-position: -746px -20px}
+.name-role4 {width:372px; height:167px; background-position: -20px -20px}
+.p1-title {width:483px; height:51px; background-position: -1422px -20px}
+.p3-i-bottom {width:26px; height:18px; background-position: -1704px -161px}
+.p3-download {width:162px; height:50px; background-position: -1658px -91px}
+.p3-i-top {width:26px; height:18px; background-position: -1658px -161px}
+.play-btn {width:84px; height:84px; background-position: -1422px -91px}
+.r1-badge {width:419px; height:133px; background-position: -1337px -203px}
+.r2-badge {width:419px; height:133px; background-position: -898px -207px}
+.r3-badge {width:419px; height:133px; background-position: -459px -207px}
+.r4-badge {width:419px; height:133px; background-position: -20px -207px}
+
+.swiper-slide{position:relative;}
+.wrapper{width:100%;position:relative;overflow:hidden;background-color:#232122;}
+.wrapper .page-box{width:100%;overflow: hidden;}
+.page-box1{background:#232122 url(//game.gtimg.cn/images/fz/web201812/bg.jpg) 50% 0  no-repeat;}
+.tableCell {display: table-cell;vertical-align: middle;width: 100%;height: 100%;}
+.response-ct{position: absolute; top: 0;width: 1920px; height:1080px;left: 50%; margin-left: -960px; -webkit-transform-origin: 50% 0% 0px; -ms-transform-origin: 50% 0% 0px; transform-origin: 50% 0% 0px;background-repeat: no-repeat; background-position: 50% 0;}
+
+.top-box{width:100%;background:url(//game.gtimg.cn/images/fz/web201812/top-bg.png) repeat;position:absolute;left:0;top:0;height:84px;z-index:9;}
+.top-box .lostark-logo{display:block;position:absolute;left:60px;top:50%;margin-top:-25px;width:199px;height:49px;background:url(//game.gtimg.cn/images/fz/web201812/lostark-logo.png) no-repeat;}
+.top-box .top-list{width:100%;text-align: center;font-size: 0}
+.top-box .top-list li{display:inline-block;*display:inline;*zoom:1;vertical-align: top;width:175px;position:relative;height:100%;}
+.top-box .top-list li a{display:block;width:100%;padding-top:22px;height:62px;-webkit-transition: all .2s;transition: all .2s;}
+.top-box .top-list li a:hover{-webkit-transform: scale(1.15);transform: scale(1.15);}
+.top-box .top-list li a span{display:block;text-align: center;font-size: 18px;color:#ffffff;line-height: 24px;text-shadow:0 0 0.2em rgba(255,255,255,0.5),0 0 0.2em rgba(255,255,255,0.5);}
+.top-box .top-list li a em{font-size: 12px;color:#ffffff;text-align: center;line-height: 16px;text-shadow:0 0 0.2em rgba(255,255,255,0.5),0 0 0.2em rgba(255,255,255,0.5);}
+.top-box .top-list li .top-line{position:absolute;right:0;top:50%;margin-top:-18px;width:2px;height:37px;background:url(//game.gtimg.cn/images/fz/web201812/top-line.png) right center no-repeat;}
+
+.la-wrap .m-left{position:absolute;left:50px;top:50%;margin-top:-39px;z-index:9;-webkit-transition: all .5s;transition: all .5s;}
+.la-wrap .m-right{position:absolute;right:50px;top:50%;margin-top:-39px;z-index:9;-webkit-transition: all .5s;transition: all .5s;}
+.la-wrap .m-right:hover,.la-wrap .m-left:hover{-webkit-transform: scale(1.2,1.2);transform: scale(1.2,1.2);}
+.page-box1 .inner-box{padding-top:395px;}
+.page-box1 .p1-title{display:block;margin:0 auto;text-indent: -9999px;position:relative;z-index:2;}
+.page-box1 .video-play{display:block;width:239px;height:115px;margin:55px auto 0;position: relative;z-index:2;}
+.page-box1 .video-play img{display:block;margin:0 auto;width:100%;height:100%;}
+.page-box1 .video-play .p1-mask{position: absolute;top:0;left:0;width:100%;height: 100%;background:url(//game.gtimg.cn/images/fz/web201812/p1-mask.png) repeat;z-index:2;}
+.page-box1 .video-play .play-btn{position: absolute;left:50%;top:50%;margin-left:-42px;margin-top:-42px;z-index:3;-webkit-transition: transform .5s;transition: transform .5s;}
+.page-box1 .video-play:hover .play-btn{-webkit-transform: scale(1.2,1.2);transform: scale(1.2,1.2);}
+.page-box1 .i-stone{position: absolute;left:50%;margin-left:-390px;top:390px;width:313px;height:372px;pointer-events: none;}
+.page-box1 .i-stone i{position:absolute;background:url(//game.gtimg.cn/images/fz/web201812/i-stone.png) no-repeat;}
+.page-box1 .i-stone .i-stone01{left:35px;top:0;width:28px;height:30px;background-position:-35px 0;}
+.page-box1 .i-stone .i-stone02{left:0;top:108px;width:12px;height:15px;background-position:0 -108px;-webkit-animation-duration: 8921ms;animation-duration: 8921ms;}
+.page-box1 .i-stone .i-stone03{left:14px;top:83px;width:53px;height:72px;background-position:-14px -83px;-webkit-animation-duration: 10427ms;animation-duration: 10427ms;}
+.page-box1 .i-stone .i-stone04{left:0;top:161px;width:20px;height:44px;background-position:0 -161px;-webkit-animation-duration: 7539ms;animation-duration: 7539ms;}
+.page-box1 .i-stone .i-stone05{left:43px;top:197px;width:18px;height:23px;background-position:-43px -197px;-webkit-animation-duration: 6666ms;animation-duration: 6666ms;}
+.page-box1 .i-stone .i-stone06{left:193px;top:164px;width:20px;height:21px;background-position:-193px -164px;-webkit-animation-duration:8056ms;animation-duration: 8056ms;}
+.page-box1 .i-stone .i-stone07{left:237px;top:212px;width:27px;height:46px;background-position:-237px -212px;-webkit-animation-duration: 8479ms;animation-duration: 8479ms;}
+.page-box1 .i-stone .i-stone08{left:271px;top:240px;width:42px;height:75px;background-position:-271px -240px;-webkit-animation-duration: 7044ms;animation-duration: 7044ms;}
+.page-box1 .i-stone .i-stone09{left:257px;top:276px;width:11px;height:19px;background-position:-257px -276px;-webkit-animation-duration: 9125ms;animation-duration: 9125ms;}
+.page-box1 .i-stone .i-stone10{left:136px;top:357px;width:24px;height:15px;background-position:-136px -357px;-webkit-animation-duration: 9527ms;animation-duration: 9527ms;}
+
+.i-float{-webkit-animation:i_float infinite;animation:i_float infinite;}
+@-webkit-keyframes i_float{0%{-webkit-transform:translate(0,0)}
+50%{-webkit-transform:translate(0,-15px)}
+100%{-webkit-transform:translate(0,0)}
+}
+@keyframes i_float{0%{transform:translate(0,0)}
+50%{transform:translate(0,-15px)}
+100%{transform:translate(0,0)}
+}
+.page-box2 .role-types{width:1920px;height:1080px;position:absolute;top:0;left:0;z-index:0;}
+.page-box2 .role-types li{float:left;width:480px;position:relative;}
+.page-box2 .role-types li img{display:block;width:480px;height:1080px;}
+.page-box2 .role-types li .p2-mask{display:block;width:480px;height:1080px;background:url(//game.gtimg.cn/images/fz/web201812/p2-mask.png) no-repeat;position:absolute;left:0;top:0;height:0;-webkit-transition: height 0.8s;transition:height 0.8s;}
+.page-box2 .role-types li .p2-badge{display:block;position:absolute;left:50%;margin-left:-209px;top:370px;opacity: 0;-webkit-transition: opacity 1.5s;transition: opacity 1.5s;visibility: hidden;}
+.page-box2 .role-types li .p2-line{display:none;width:50px;border-top:1px solid #423f3f;position:absolute;left:50%;margin-left:-25px;top:594px;}
+.page-box2 .role-types li .p2-role-name{display:block;position:absolute;left:50%;margin-left:-157px;top:662px;z-index:9;}
+.page-box2 .role-types li a:hover .p2-mask,.page-box2 .role-types li a:hover .p2-badge,.page-box2 .role-types li a:hover .p2-line{display:block;}
+.page-box2 .role-types li a:hover .p2-mask{height:1080px;}
+.page-box2 .role-types li a:hover .p2-badge{opacity: 1;visibility: visible;}
+.page-box3 .wallpaper-wrap{width:100%;overflow:hidden;position:relative;}
+.page-box3 .wallpaper-list{position:absolute;left:175px;top:50%;margin-top:-285px;width:135px;height:570px;overflow:hidden;z-index:2;}
+.page-box3 .wallpaper-tab{width:135px;height:580px;}
+.page-box3 .wallpaper-list ul{width:100%;}
+.page-box3 .wallpaper-list li{width:240px;height:145px;position:relative;cursor: pointer;}
+.page-box3 .wallpaper-list li img{display:block;width:240px;height:135px;}
+.page-box3 .wallpaper-list li .p3-mask{display:block;width:100%;height:135px;position:absolute;left:0;top:0;background:url(//game.gtimg.cn/images/fz/web201812/p3-mask2.png) repeat;}
+.page-box3 .wallpaper-list li.active .p3-mask{display:none;}
+.page-box3 .wallpaper-list .p3-top,.page-box3 .wallpaper-list .p3-bottom{width:100%;height:30px;position:absolute;left:0;background:url(//game.gtimg.cn/images/fz/web201812/p3-mask.png) repeat;-webkit-transition: all .5s;transition: all .5s;}
+.page-box3 .wallpaper-list .p3-top i,.page-box3 .wallpaper-list .p3-bottom i{position:absolute;left:50%;top:50%;margin-left:-13px;margin-top:-9px;}
+.page-box3 .wallpaper-list .p3-top:hover i, .page-box3 .wallpaper-list .p3-bottom:hover i{-webkit-transform: scale(1.2,1.2);transform: scale(1.2,1.2);}
+.page-box3 .wallpaper-list .p3-top{top:0;}
+.page-box3 .wallpaper-list .p3-bottom{bottom:10px;}
+.page-box3 .wallpaper-cont{width:100%;height:1080px;}
+.page-box3 .wallpaper-cont li{overflow:hidden;}
+.page-box3 .wallpaper-cont img{display:block;}
+.page-box3 .p3-download{position:absolute;left:50%;margin-left:-81px;bottom:55px;-webkit-transition: all .5s;transition: all .5s;}
+.page-box3 .p3-download:hover{-webkit-transform: scale(1.1,1.1);transform: scale(1.1,1.1);}
+
+
+/*视频弹窗*/
+.popupbox{width: 800px;height: 535px;z-index: 10; background-color: #000; display:none; outline:none;border:1px solid #ededed;font-size:12px;}
+.popupbox #VideoContent{width:100%;height:100%;}
+.pop-v-close{position: absolute;top: -6px;right: -70px;display: block;width: 60px; height: 60px; background:url(//game.gtimg.cn/images/fz/web201812/pop-v-close.png) no-repeat; outline:none; border:0;}
+.pop-v-close:hover{text-decoration: none;-webkit-animation: sa 2s;-moz-animation: sa 2s;-ms-animation: sa 2s;animation: sa 2s;}
+@-webkit-keyframes sa {
+	0% {-webkit-transform:rotate(-720deg);}
+	100% {-webkit-transform:rotate(0deg);}
+}
+@-moz-keyframes sa {
+	0% {-moz-transform:rotate(-720deg);}
+	100% {-moz-transform:rotate(0deg);}
+}
+@-ms-keyframes sa {
+	0% {-ms-transform:rotate(-720deg);}
+	100% {-ms-transform:rotate(0deg);}
+}
+@keyframes sa {
+	0% {transform:rotate(-720deg);}
+	100% {transform:rotate(0deg);}
+	}
+
+
+.role-spr {background-repeat: no-repeat;background-image:url(//game.gtimg.cn/images/fz/web201812/role-spr.png);}
+.f-battlemaster {width:147px; height:147px; background-position: -1863px -384px}
+.role-tab a:hover em.f-battlemaster,.role-tab a.active em.f-battlemaster {width:187px; height:187px; background-position: -1115px -247px}
+.f-infighter {width:147px; height:147px; background-position: -1863px -207px}
+.role-tab a:hover em.f-infighter,.role-tab a.active em.f-infighter {width:187px; height:187px; background-position: -1115px -30px}
+.f-soulmaster {width:147px; height:147px; background-position: -1686px -384px}
+.role-tab a:hover em.f-soulmaster,.role-tab a.active em.f-soulmaster {width:187px; height:187px; background-position: -898px -247px}
+.h-blaster {width:147px; height:147px; background-position: -1686px -207px}
+.role-tab a:hover em.h-blaster,.role-tab a.active em.h-blaster {width:187px; height:187px; background-position: -898px -30px}
+.h-devilhunter {width:147px; height:147px; background-position: -1863px -30px}
+.role-tab a:hover em.h-devilhunter,.role-tab a.active em.h-devilhunter {width:187px; height:187px; background-position: -681px -247px}
+.h-hawkeye {width:147px; height:147px; background-position: -1686px -30px}
+.role-tab a:hover em.h-hawkeye,.role-tab a.active em.h-hawkeye {width:187px; height:187px; background-position: -681px -30px}
+.i-diamond {width:25px; height:25px; background-position: -30px -464px}
+.role-tab a:hover i.i-diamond,.role-tab a.active i.i-diamond {width:25px; height:25px; background-position: -85px -464px}
+.i-line {width:524px; height:1px; background-position: -30px -519px}
+.m-arcana {width:147px; height:147px; background-position: -1509px -384px}
+.role-tab a:hover em.m-arcana,.role-tab a.active em.m-arcana {width:187px; height:187px; background-position: -464px -247px}
+.m-bard {width:147px; height:147px; background-position: -1509px -207px}
+.role-tab a:hover em.m-bard,.role-tab a.active em.m-bard {width:187px; height:187px; background-position: -464px -30px}
+.m-summoner {width:147px; height:147px; background-position: -1509px -30px}
+.role-tab a:hover em.m-summoner,.role-tab a.active em.m-summoner {width:187px; height:187px; background-position: -247px -247px}
+.w-berserker {width:147px; height:147px; background-position: -1332px -384px}
+.role-tab a:hover em.w-berserker,.role-tab a.active em.w-berserker {width:187px; height:187px; background-position: -247px -30px}
+.w-destroyer {width:147px; height:147px; background-position: -1332px -207px}
+.role-tab a:hover em.w-destroyer,.role-tab a.active em.w-destroyer {width:187px; height:187px; background-position: -30px -247px}
+.w-warload {width:147px; height:147px; background-position: -1332px -30px}
+.role-tab a:hover em.w-warload,.role-tab a.active em.w-warload {width:187px; height:187px; background-position: -30px -30px}
+/*页面模块公共样式*/
+.role-wrap{background:url(//game.gtimg.cn/images/fz/web201812/role-bg.jpg) 50% 0  no-repeat;width:100%;}
+.role-page{width:100%;}
+.tableCell {display: table-cell;vertical-align: middle;width: 100%;height: 100%;}
+.response-ct{position: absolute; top: 0;width: 1920px; height:1080px;left: 50%; margin-left: -960px; -webkit-transform-origin: 50% 0% 0px; -ms-transform-origin: 50% 0% 0px; transform-origin: 50% 0% 0px;background-repeat: no-repeat; background-position: 50% 0;}
+.role-wrap .m-left{position:absolute;left:50px;top:50%;margin-top:-39px;z-index:9;-webkit-transition: all .5s;transition: all .5s;}
+.role-wrap .m-right{position:absolute;right:50px;top:50%;margin-top:-39px;z-index:9;-webkit-transition: all .5s;transition: all .5s;}
+.role-wrap .m-right:hover,.role-wrap .m-left:hover{-webkit-transform: scale(1.2,1.2);transform: scale(1.2,1.2);}
+.la-role{width:100%;height:1080px;z-index:2;}
+.role-tab{width:748px;position:absolute;text-align: center;height:200px;top:50%;left:50%;margin-left:-800px;margin-top:-380px;font-size: 0;}
+.role-tab .i-line{position:absolute;left:50%;margin-left:-262px;bottom:11px;}
+.role-tab a{display:inline-block;*display:inline;*zoom:1;vertical-align:top;height:200px;width:187px;position:relative;}
+.role-tab a em{display: block;margin:0 auto;}
+.role-tab a:hover em,.role-tab a.active em{position:absolute;left:0;top:-20px;}
+.role-tab a i{position:absolute;left:50%;margin-left:-12px;bottom:0;}
+.la-role .role-hero{position:absolute;right:0;bottom:0;}
+.la-role .role-name{position:absolute;left:50%;margin-left:-705px;top:50%;margin-top:-100px;}
+ .animation_spark i {
+ 	display: block;
+ 	-webkit-animation:opacity-spark 200ms infinite,scale-spark 2s infinite;
+ 	animation:opacity-spark 200ms infinite, scale-spark 2s infinite;
+ 	background-image: url(//game.gtimg.cn/images/fz/web201812/i-light.png);
+ 	background-repeat: no-repeat;
+ }
+ .animation_spark div{position: absolute;display: inline-block;bottom: -100px;-webkit-animation:square ease infinite;
+ 	animation:square ease infinite;z-index: 20;}
+ .animation_spark .i-spark01 i{width:34px;height:34px;background-position: -0 -388px;}
+ .animation_spark .i-spark02 i{width:40px;height:40px;background-position: -1501px -613px;}
+ .animation_spark .i-spark03 i{width:20px;height:20px;background-position: -1572px -357px;}
+ .animation_spark .i-spark04 i{width:20px;height:20px;background-position: -1749px -377px;}
+ .animation_spark .i-spark05 i{width:20px;height:20px;background-position: -1797px -635px;}
+ .animation_spark .i-spark06 i{width:40px;height:40px;background-position: -841px -499px;}
+ .animation_spark .i-spark07 i{width:34px;height:34px;background-position: -148px -472px;}
+ .animation_spark .i-spark08 i{width:18px;height:18px;background-position: -1113px -556px;}
+ .animation_spark .i-spark09 i{width:34px;height:34px;background-position: -1791px -627px;}
+ .animation_spark .i-spark10 i{width:26px;height:26px;background-position: -1077px -530px;}
+ .animation_spark .i-spark11 i{width:20px;height:20px;background-position: -1757px -532px;}
+ .animation_spark .i-spark12 i{width:14px;height:14px;background-position: -1080px -435px;}
+ .animation_spark .i-spark13 i{width:30px;height:30px;background-position: -1039px -500px;}
+ .animation_spark .i-spark14 i{width:15px;height:15px;background-position: -21px -161px;}
+ .animation_spark .i-spark15 i{width:15px;height:15px;background-position: -1721px -380px;}
+ 
+ .animation_spark .i-spark16 i{width:20px;height:20px;background-position: -1797px -635px;}
+ .animation_spark .i-spark17 i{width:40px;height:40px;background-position: -841px -499px;}
+ .animation_spark .i-spark18 i{width:34px;height:34px;background-position: -148px -472px;}
+ .animation_spark .i-spark19 i{width:18px;height:18px;background-position: -1113px -556px;}
+ .animation_spark .i-spark20 i{width:34px;height:34px;background-position: -1791px -627px;}
+
+ .animation_spark .i-spark01 {
+ 	left:100%;
+ 	-webkit-animation-duration: 3441ms;
+          animation-duration: 3441ms;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+ 	}
+ .animation_spark .i-spark02 {
+ 	left: 150%;
+ 	-webkit-animation-duration: 5101ms;
+          animation-duration: 5141ms;
+  -webkit-animation-delay: 4544ms;
+          animation-delay: 4544ms;
+ }
+ 
+ .animation_spark .i-spark03 {
+ 	left: 85%;
+ 	-webkit-animation-name:square02;
+ 	animation-name:square02;
+ 	-webkit-animation-duration: 4921ms;
+          animation-duration: 4921ms;
+  -webkit-animation-delay: 5982ms;
+          animation-delay: 5982ms;
+ }
+ 
+ .animation_spark .i-spark04 {
+ 	left: 40%;
+ 	-webkit-animation-duration: 2s;
+ 	animation-duration: 2s;
+ 	-webkit-animation-duration: 5427ms;
+          animation-duration: 5427ms;
+  -webkit-animation-delay: 3649ms;
+          animation-delay: 3649ms;
+ }
+ 
+ .animation_spark .i-spark05 {
+ 	left: 70%;
+ 	-webkit-animation-name:square03;
+ 	animation-name:square03;
+ 	-webkit-animation-duration: 5951ms;
+          animation-duration: 5951ms;
+  -webkit-animation-delay: 8909ms;
+          animation-delay: 8909ms;
+ 	
+ }
+ 
+ .animation_spark .i-spark06 {
+ 	left: 83%;
+ 	-webkit-animation-name:square04;
+ 	animation-name:square04;
+ 	-webkit-animation-duration: 3642ms;
+          animation-duration: 3642ms;
+  -webkit-animation-delay: 2502ms;
+          animation-delay: 2502ms;
+ }
+ 
+ .animation_spark .i-spark07 {
+ 	left:96%;
+ 	-webkit-animation-name:square05;
+ 	animation-name:square05;
+ 	-webkit-animation-duration: 4439ms;
+          animation-duration: 4439ms;
+  -webkit-animation-delay: 455ms;
+          animation-delay: 455ms;
+ }
+ 
+ .animation_spark .i-spark08 {
+ 	left: 55%;
+ 	-webkit-animation-name:square06;
+ 	animation-name:square06;
+ 	-webkit-animation-duration: 3539ms;
+          animation-duration: 3539ms;
+  -webkit-animation-delay: 3595ms;
+          animation-delay: 3595ms;
+ }
+ 
+ .animation_spark .i-spark09 {
+ 	left: 130%;
+ 	-webkit-animation-name:square07;
+ 	animation-name:square07;
+ 	 -webkit-animation-duration: 3480ms;
+          animation-duration: 3480ms;
+  -webkit-animation-delay: 2680ms;
+          animation-delay: 2680ms;
+ }
+ 
+ .animation_spark .i-spark10 {
+ 	left: 120%;
+ 	-webkit-animation-name:square02;
+ 	animation-name:square02;
+ 	-webkit-animation-duration: 4087ms;
+          animation-duration: 4087ms;
+  -webkit-animation-delay: 9461ms;
+          animation-delay: 9461ms;
+ }
+ .animation_spark .i-spark11 {
+ 	left: 80%;
+ 	-webkit-animation-name:square03;
+ 	animation-name:square03;
+ 	-webkit-animation-duration: 5292ms;
+          animation-duration: 5292ms;
+  -webkit-animation-delay: 9812ms;
+          animation-delay: 9812ms;
+ }
+ 
+ .animation_spark .i-spark12 {
+ 	left: 33%;
+ 	-webkit-animation-name:square04;
+ 	animation-name:square04;
+ 	-webkit-animation-duration: 2920ms;
+          animation-duration: 2920ms;
+  -webkit-animation-delay: 2180ms;
+          animation-delay: 2180ms;
+ }
+ 
+ .animation_spark .i-spark13 {
+ 	left: 93%;
+ 	-webkit-animation-duration: 4293ms;
+          animation-duration: 4293ms;
+  -webkit-animation-delay: 6446ms;
+          animation-delay: 6446ms;
+ }
+ 
+ .animation_spark .i-spark14 {
+ 	left: 45%;
+ 	-webkit-animation-name:square06;
+ 	animation-name:square06;
+ 	-webkit-animation-duration: 4677ms;
+          animation-duration: 4677ms;
+  -webkit-animation-delay: 5675ms;
+          animation-delay: 5675ms;
+ }
+ 
+ .animation_spark .i-spark15 {
+ 	left: 15%;
+ 	-webkit-animation-name:square07;
+ 	animation-name:square07;
+ 	-webkit-animation-duration: 3055ms;
+          animation-duration: 3055ms;
+  -webkit-animation-delay: 7418ms;
+          animation-delay: 7418ms;
+ }
+ 
+ .animation_spark .i-spark16 {
+ 	left: 110%;
+ 	-webkit-animation-name:square02;
+ 	animation-name:square02;
+ 	-webkit-animation-duration: 4673ms;
+          animation-duration: 4673ms;
+  -webkit-animation-delay: 871ms;
+          animation-delay: 871ms;
+ }
+ 
+ .animation_spark .i-spark17 {
+ 	left: 50%;
+ 	-webkit-animation-name:square03;
+ 	animation-name:square03;
+ 	-webkit-animation-duration: 3468ms;
+          animation-duration: 3468ms;
+  -webkit-animation-delay: 2038ms;
+          animation-delay: 2038ms;
+ }
+ 
+ .animation_spark .i-spark18 {
+ 	left: 60%;
+ 	-webkit-animation-name:square04;
+ 	animation-name:square04;
+ 	 -webkit-animation-duration: 4523ms;
+          animation-duration: 4523ms;
+  -webkit-animation-delay: 2150ms;
+          animation-delay: 2150ms;
+ }
+ 
+ .animation_spark .i-spark19 {
+ 	left: 30%;
+ 	-webkit-animation-name:square05;
+ 	animation-name:square05;
+ 	-webkit-animation-duration: 4472ms;
+          animation-duration: 4472ms;
+  -webkit-animation-delay: 428ms;
+          animation-delay: 428ms;
+ }
+ 
+ .animation_spark .i-spark20 {
+  left: 133%;
+  -webkit-animation-name:square06;
+ 	animation-name:square06;
+  -webkit-animation-duration: 5290ms;
+          animation-duration: 5290ms;
+  -webkit-animation-delay: 8685ms;
+          animation-delay: 8685ms;
+ }
+ @-webkit-keyframes square {
+ 	0% {
+ 		-webkit-transform: translate(0,0) rotate(0deg);
+ 		transform: translate(0,0) rotate(0deg);
+ 	
+ 	}
+ 	50%{opacity: 1;}
+ 	100% {
+ 		-webkit-transform: translate(-600px,-600px) rotate(600deg);
+ 		transform: translate(-600px,-600px) rotate(600deg);
+ 	
+ 	}
+ }
+ 
+ @keyframes square {
+ 	0% {
+ 		-webkit-transform: translate(0,0) rotate(0deg);
+ 		transform: translate(0,0) rotate(0deg);
+ 		opacity: 1;
+ 	
+ 	}
+ 	50%{opacity: 1;}
+ 	100% {
+ 		-webkit-transform: translate(-600px,-600px) rotate(600deg);
+ 		transform: translate(-600px,-600px) rotate(600deg);
+ 		opacity: 0;
+ 		
+ 	}
+ }
+  @-webkit-keyframes square02 {
+ 	0% {
+ 		-webkit-transform: translate(0,0) rotate(0deg);
+ 		transform: translate(0,0) rotate(0deg);
+ 	
+ 	}
+ 	50%{opacity: 1;}
+ 	100% {
+ 		-webkit-transform: translate(-600px,-876px) rotate(600deg);
+ 		transform: translate(-600px,-876px) rotate(600deg);
+ 	
+ 	}
+ }
+ 
+ @keyframes square02 {
+ 	0% {
+ 		-webkit-transform: translate(0,0) rotate(0deg);
+ 		transform: translate(0,0) rotate(0deg);
+ 		opacity: 1;
+ 	
+ 	}
+ 	50%{opacity: 1;}
+ 	100% {
+ 		-webkit-transform: translate(-600px,-876px) rotate(600deg);
+ 		transform: translate(-600px,-876px) rotate(600deg);
+ 		opacity: 0;
+ 		
+ 	}
+ }
+  @-webkit-keyframes square03 {
+ 	0% {
+ 		-webkit-transform: translate(0,0) rotate(0deg);
+ 		transform: translate(0,0) rotate(0deg);
+ 	
+ 	}
+ 	50%{opacity: 1;}
+ 	100% {
+ 		-webkit-transform: translate(-600px,-389px) rotate(600deg);
+ 		transform: translate(-600px,-389px) rotate(600deg);
+ 	
+ 	}
+ }
+ 
+ @keyframes square03 {
+ 	0% {
+ 		-webkit-transform: translate(0,0) rotate(0deg);
+ 		transform: translate(0,0) rotate(0deg);
+ 		opacity: 1;
+ 	
+ 	}
+ 	50%{opacity: 1;}
+ 	100% {
+ 		-webkit-transform: translate(-600px,-389px) rotate(600deg);
+ 		transform: translate(-600px,-389px) rotate(600deg);
+ 		opacity: 0;
+ 		
+ 	}
+ }
+ @-webkit-keyframes square04 {
+ 	0% {
+ 		-webkit-transform: translate(0,0) rotate(0deg);
+ 		transform: translate(0,0) rotate(0deg);
+ 	
+ 	}
+ 	50%{opacity: 1;}
+ 	100% {
+ 		-webkit-transform: translate(-600px,-677px) rotate(600deg);
+ 		transform: translate(-600px,-677px) rotate(600deg);
+ 	
+ 	}
+ }
+ 
+ @keyframes square04 {
+ 	0% {
+ 		-webkit-transform: translate(0,0) rotate(0deg);
+ 		transform: translate(0,0) rotate(0deg);
+ 		opacity: 1;
+ 	
+ 	}
+ 	50%{opacity: 1;}
+ 	100% {
+ 		-webkit-transform: translate(-600px,-677px) rotate(600deg);
+ 		transform: translate(-600px,-677px) rotate(600deg);
+ 		opacity: 0;
+ 		
+ 	}
+ }
+ @-webkit-keyframes square05 {
+ 	0% {
+ 		-webkit-transform: translate(0,0) rotate(0deg);
+ 		transform: translate(0,0) rotate(0deg);
+ 	
+ 	}
+ 	50%{opacity: 1;}
+ 	100% {
+ 		-webkit-transform: translate(-600px,-453px) rotate(600deg);
+ 		transform: translate(-600px,-453px) rotate(600deg);
+ 	
+ 	}
+ }
+ 
+ @keyframes square05 {
+ 	0% {
+ 		-webkit-transform: translate(0,0) rotate(0deg);
+ 		transform: translate(0,0) rotate(0deg);
+ 		opacity: 1;
+ 	
+ 	}
+ 	50%{opacity: 1;}
+ 	100% {
+ 		-webkit-transform: translate(-600px,-453px) rotate(600deg);
+ 		transform: translate(-600px,-453px) rotate(600deg);
+ 		opacity: 0;
+ 		
+ 	}
+ }
+ @-webkit-keyframes square06 {
+ 	0% {
+ 		-webkit-transform: translate(0,0) rotate(0deg);
+ 		transform: translate(0,0) rotate(0deg);
+ 	
+ 	}
+ 	50%{opacity: 1;}
+ 	100% {
+ 		-webkit-transform: translate(-600px,-720px) rotate(600deg);
+ 		transform: translate(-600px,-720px) rotate(600deg);
+ 	
+ 	}
+ }
+ 
+ @keyframes square06 {
+ 	0% {
+ 		-webkit-transform: translate(0,0) rotate(0deg);
+ 		transform: translate(0,0) rotate(0deg);
+ 		opacity: 1;
+ 	
+ 	}
+ 	50%{opacity: 1;}
+ 	100% {
+ 		-webkit-transform: translate(-600px,-720px) rotate(600deg);
+ 		transform: translate(-600px,-720px) rotate(600deg);
+ 		opacity: 0;
+ 		
+ 	}
+ }
+  @-webkit-keyframes square07 {
+ 	0% {
+ 		-webkit-transform: translate(0,0) rotate(0deg);
+ 		transform: translate(0,0) rotate(0deg);
+ 	
+ 	}
+ 	50%{opacity: 1;}
+ 	100% {
+ 		-webkit-transform: translate(-600px,-537px) rotate(600deg);
+ 		transform: translate(-600px,-537px) rotate(600deg);
+ 	
+ 	}
+ }
+ 
+ @keyframes square07 {
+ 	0% {
+ 		-webkit-transform: translate(0,0) rotate(0deg);
+ 		transform: translate(0,0) rotate(0deg);
+ 		opacity: 1;
+ 	
+ 	}
+ 	50%{opacity: 1;}
+ 	100% {
+ 		-webkit-transform: translate(-600px,-537px) rotate(600deg);
+ 		transform: translate(-600px,-537px) rotate(600deg);
+ 		opacity: 0;
+ 		
+ 	}
+ }
+ @-webkit-keyframes opacity-spark {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacity-spark {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes scale-spark {
+  0% {
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+            transform: scale3d(0.8, 0.8, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.2, 1.2, 1);
+            transform: scale3d(1.2, 1.2, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+            transform: scale3d(0.8, 0.8, 1);
+  }
+}
+@keyframes scale-spark {
+  0% {
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+            transform: scale3d(0.8, 0.8, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.2, 1.2, 1);
+            transform: scale3d(1.2, 1.2, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+            transform: scale3d(0.8, 0.8, 1);
+  }
+}
+.i-mask{position:absolute;left:50%;margin-left:-960px;bottom:0;width:1920px;height: 404px;background:url(//game.gtimg.cn/images/fz/web201812/i-mask.png) no-repeat;z-index:9;pointer-events: none;}
+.i-smoke{position:absolute;right:-100px;bottom:-103px;width:1566px;height: 393px;background:url(//game.gtimg.cn/images/fz/web201812/i-smoke.png) center bottom no-repeat;z-index:9;pointer-events: none;-webkit-animation: smoke 30s ease infinite;animation: smoke 30s ease infinite;}
+ @keyframes smoke {
+ 	0% {
+ 		opacity:0;
+ 		-webkit-transform: translate(0,0);
+ 		transform: translate(0,0);
+ 	}
+ 	50% {
+ 		opacity: 1;
+ 		-webkit-transform: translate(-100px,-83px);
+ 		transform: translate(-100px,-83px);
+ 	}100% {
+ 		opacity: 0;
+ 		-webkit-transform: translate(-200px,-103px);
+ 		transform: translate(-200px,-103px);
+ 	}
+}
+@-webkit-keyframes smoke {
+ 	0% {
+ 		opacity:0;
+ 		-webkit-transform: translate(0,0);
+ 		transform: translate(0,0);
+ 	}
+ 	50% {
+ 		opacity: 1;
+ 		-webkit-transform: translate(-100px,-83px);
+ 		transform: translate(-100px,-83px);
+ 	}100% {
+ 		opacity: 0;
+ 		-webkit-transform: translate(-200px,-103px);
+ 		transform: translate(-200px,-103px);
+ 	}
+}
+
+
+/*
+ * Swiper 2.7.6
+ * Mobile touch slider and framework with hardware accelerated transitions
+ *
+ * http://www.idangero.us/sliders/swiper/
+ *
+ * Copyright 2010-2015, Vladimir Kharlampidi
+ * The iDangero.us
+ * http://www.idangero.us/
+ *
+ * Licensed under GPL & MIT
+ *
+ * Released on: February 11, 2015
+*/
+/* ===============================================================
+Basic Swiper Styles 
+================================================================*/
+.swiper-container {
+	margin:0 auto;
+	position:relative;
+	overflow:hidden;
+	direction:ltr;
+	-webkit-backface-visibility:hidden;
+	-moz-backface-visibility:hidden;
+	-ms-backface-visibility:hidden;
+	-o-backface-visibility:hidden;
+	backface-visibility:hidden;
+	/* Fix of Webkit flickering */
+	z-index:1;
+}
+.swiper-wrapper {
+	position:relative;
+	width:100%;
+	-webkit-transition-property:-webkit-transform, left, top;
+	-webkit-transition-duration:0s;
+	-webkit-transform:translate3d(0px,0,0);
+	-webkit-transition-timing-function:ease;
+	
+	-moz-transition-property:-moz-transform, left, top;
+	-moz-transition-duration:0s;
+	-moz-transform:translate3d(0px,0,0);
+	-moz-transition-timing-function:ease;
+	
+	-o-transition-property:-o-transform, left, top;
+	-o-transition-duration:0s;
+	-o-transform:translate3d(0px,0,0);
+	-o-transition-timing-function:ease;
+	-o-transform:translate(0px,0px);
+	
+	-ms-transition-property:-ms-transform, left, top;
+	-ms-transition-duration:0s;
+	-ms-transform:translate3d(0px,0,0);
+	-ms-transition-timing-function:ease;
+	
+	transition-property:transform, left, top;
+	transition-duration:0s;
+	transform:translate3d(0px,0,0);
+	transition-timing-function:ease;
+
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+.swiper-free-mode > .swiper-wrapper {
+	-webkit-transition-timing-function: ease-out;
+	-moz-transition-timing-function: ease-out;
+	-ms-transition-timing-function: ease-out;
+	-o-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+	margin: 0 auto;
+}
+.swiper-slide {
+	float: left;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+/* IE10 Windows Phone 8 Fixes */
+.swiper-wp8-horizontal {
+	-ms-touch-action: pan-y;
+}
+.swiper-wp8-vertical {
+	-ms-touch-action: pan-x;
+}

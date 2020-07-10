@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>找最大元素的下标和该元素的值</title>
+</head>
+<body>
+    <script>
+    var arr=[10,9,1,20,19,30,5];
+    var maxNum=0;
+    for (var i in arr){
+        if(arr[i]>maxNum){
+            maxNum=arr[i];
+        }
+    }
+    console.log("最大元素的下标位置："+arr.indexOf(maxNum)+",该元素的值:"+maxNum);
+    </script>
+</body>
+</html>

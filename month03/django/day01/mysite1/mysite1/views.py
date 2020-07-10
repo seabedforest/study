@@ -1,5 +1,4 @@
 from django.http import HttpResponse
-from django.shortcuts import render
 
 
 def page_index_view(request):
@@ -11,9 +10,9 @@ def page_2003_view(request):
 
 
 def page_1_view(request):
-    print('path_info is ',request.path_info)
-    print('method is ',request.method)
-    print('full path is ',request.get_full_path())
+    print('path_info is ', request.path_info)
+    print('method is ', request.method)
+    print('full path is ', request.get_full_path())
     return HttpResponse('这是编号为1的网页')
 
 
@@ -41,4 +40,3 @@ def calculate(request, num1, string, num2):
 
 def show_birthday(request, year, month, day):
     return HttpResponse("生日为: %s年%s月%s日" % (year, month, day))
-

@@ -4,36 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>倒计时</title>
+    <title>到凌晨0点的时间差</title>
 </head>
 <body>
-    <!-- 实现当前时间到下课时间21点倒计时 -->
     <div>
-        <span id="h">00</span>
+        <span id='h'>00</span>
         :
         <span id="m">00</span>
         :
         <span id="s">00</span>
     </div>
     <script>
-    //补零
-    function addZero(num) {
+    // 补零
+    function addZero(num){
         return num<10?'0'+num:num+'';
     }
-    //当前的日期对象
-    function countdown(){
-        var start = new Date();
-        //21点时间的日期对象
-        var end = new Date("2020/7/9 21:00:00");
-        //通过时间差计算时分秒 
-        var timeDiff=((end-start)/1000);
 
+    function countdown(){
+        var start=new Date();
+        //凌晨0点的日期对象
+        var end=new Date(`${start.getFullYear()}/${start.getMonth()+1}/${start.getDate()+1} 00:00:00`);
+        // 通过时间差计算时分秒
+        var timeDiff=((end-start)/1000);
         var h=parseInt(timeDiff/3600);
         var m=parseInt(timeDiff/60%60);
         var s=parseInt(timeDiff%60);
-        // console.log(h,m,s)
-
-
         var hour=document.getElementById('h');
         var minute=document.getElementById('m');
         var second=document.getElementById('s');
@@ -41,7 +36,9 @@
         minute.innerHTML=addZero(m);
         second.innerHTML=addZero(s);
     }
-    var timeer=setInterval(countdown,100);
+
+    setInterval(countdown,1000);
     </script>
+
 </body>
 </html>
