@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试传参</title>
+</head>
+<body>
+<h3>int 是{{int|add:'3'}}</h3>
+<h3>str 是{{str}}</h3>
+<h3>lst 是{{lst}}</h3>
+<h3>lst 的第一个元素{{lst.0}}</h3>
+<h3>dict 是{{dict}}</h3>
+<h3>dict['haha']是{{dict.haha}}</h3>
+<h3>function 是{{function}}</h3>
+<h3>class obj是{{class.say}}</h3>
+<h3>script 是{{script}}</h3>
+
+{% if int > 10%}
+我大于10
+{% else %}
+我不大于10
+{% endif %}
+
+
+{% for i in lst %}
+    <p>{% if forloop.first %} 第一次循环 {% endif %} </p>
+    <p>{{i}}</p>
+    <p>{% if forloop.last %} 最后一次循环 {% endif %} </p>
+{% empty %}
+    <p>对不起，当前没有数据</p>
+{% endfor %}
+</body>
+</html>
