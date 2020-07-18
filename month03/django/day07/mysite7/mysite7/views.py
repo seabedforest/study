@@ -20,4 +20,4 @@ def test_csrf(request):
     elif request.method == 'POST':
         return HttpResponse('---post is ok')
 
-    
+
