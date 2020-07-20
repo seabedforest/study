@@ -47,3 +47,4 @@ def upload_view(request):
             data = a_file.file.read()
             f.write(data)
         return HttpResponse("接收文件:" + a_file.name + "成功")
+
