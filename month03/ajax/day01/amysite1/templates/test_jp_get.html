@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试jq ajax</title>
+</head>
+<body>
+<script src="/static/jquery.min.js"></script>
+<button id="btn">jq get</button>
+<div id="show"></div>
+<script>
+    $(function(){
+        $('#btn').click(function(){
+            $.ajax({
+                url: '/test_jq_get_server',
+                type: 'GET',
+                success: function(res){
+                    $('#show').html(res);
+                }
+            })
+        })
+    })
+</script>
+</body>
+</html>

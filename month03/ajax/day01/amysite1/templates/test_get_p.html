@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试ajax get 传参</title>
+    <script src="/static/jquery.min.js"></script>
+    <script src="/static/common.js"></script>
+</head>
+<body>
+<p>
+    用户名:<input type="text" id="uname">
+    <span id="show"></span>
+</p>
+<p>
+    <button id="btn">发送</button>
+</p>
+
+<script>
+    $(function(){
+        $('#btn').click(function(){
+            var xhr = createXhr();
+            var url = '/test_get_p_server?uname=' + $('#uname').val();
+            xhr.open('GET',url,true);
+            xhr.onreadystatechange = function(){
+               if (xhr.readyState == 4 && xhr.status == 200){
+                    $('#show').html(xhr.responseText);
+               };
+            };
+            xhr.send(null);
+        })
+    })
+</script>
+</body>
+</html>
