@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取用户</title>
+</head>
+<body>
+<script src="/static/jquery.min.js"></script>
+<button id="btn">show data</button>
+<table border="1">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>age</th>
+        </tr>
+    </thead>
+    <tbody id="show">
+    </tbody>
+</table>
+<script>
+    $(function(){
+        $('#btn').click(function(){
+            $.ajax({
+                url:'/test_make_json',
+                type:'GET',
+                dataType:'json',
+                success: function(res){
+                    var html = '';
+                    $.each(res,function(i,obj){
+                        html += "<tr>";
+                        html += "<td>" + obj.name + "</td>";
+                        html += "<td>" + obj.age + "</td>";
+                        html += "</tr>";
+                    });
+                    $('#show').html(html);
+                },
+            })
+        })
+    })
+</script>
+
+</body>
+</html>

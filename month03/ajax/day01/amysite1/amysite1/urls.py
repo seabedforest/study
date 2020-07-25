@@ -19,14 +19,21 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test_xhr',views.test_xhr),
-    path('test_xhr_get',views.test_xhr_get),
-    path('test_xhr_post',views.test_xhr_post),
-    path('test_xhr_post_server',views.test_xhr_post_server),
+    path('test_xhr', views.test_xhr),
+    path('test_xhr_get', views.test_xhr_get),
+    path('test_xhr_post', views.test_xhr_post),
+    path('test_xhr_post_server', views.test_xhr_post_server),
     path('test_xhr_get_server', views.test_xhr_get_server),
     path('test_get_p', views.test_get_p),
     path('test_get_p_server', views.test_get_p_server),
-    path('test_jq_get',views.test_jq_get),
-    path('test_jq_get_server',views.test_jq_get_server),
-    path('test_json',views.test_json),
+    path('test_jq_get', views.test_jq_get),
+    path('test_jq_get_server', views.test_jq_get_server),
+    path('test_json', views.test_json),
+
+    # day02
+    path('test_make_json', views.test_make_json),
+    path('user_index', views.user_index),
+    path('test_cross', views.test_cross),
+    path('cross_server', views.cross_server),
+    path('cross_server_json', views.cross_server_json),
 ]

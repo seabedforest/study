@@ -1,5 +1,6 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
+from user.models import User
 
 
 def test_xhr(request):
@@ -41,3 +42,54 @@ def test_jq_get_server(request):
 
 def test_json(request):
     return render(request, 'test_json.html')
+
+
+def test_make_json(request):
+    # python解决方案
+    """    import json
+    all_data = User.objects.all()
+    # json.dumps只识别python常规对象，json.dumps(all_data)会报错
+    new_data = []
+    for i in all_data:
+        _data = {}
+        _data['name'] = i.username
+        _data['age'] = i.age
+        new_data.append(_data)
+    json_str = json.dumps(new_data)
+    return HttpResponse(json_str,content_type='application/json')"""
+
+    # Django方案1
+    # from django.core import serializers
+    # qs = User.objects.all()
+    # json_str = serializers.serialize('json', qs)
+    # return HttpResponse(json_str)
+
+    # Django方案2
+    all_data = User.objects.all()
+    new_data = []
+    for i in all_data:
+        _data = {}
+        _data['name'] = i.username
+        _data['age'] = i.age
+        new_data.append(_data)
+    return JsonResponse(new_data, safe=False)
+
+
+def user_index(request):
+    return render(request, 'user_index.html')
+
+
+def test_cross(request):
+    return render(request, 'test_cross.html')
+
+
+def cross_server(request):
+    func = request.GET.get('callback')
+    return HttpResponse(func + "('wo chuan guo le fang huo qiang come to see you')")
+
+
+def cross_server_json(request):
+    import json
+    func = request.GET.get('callback')
+    d = {'name': 'gxn', 'age': 18}
+    return HttpResponse(func + "(" + json.dumps(d)+")")

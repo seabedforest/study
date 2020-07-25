@@ -3,18 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>测试json</title>
+    <script src="/static/jquery.min.js"></script>
 </head>
 <body>
 <button onclick="showJson()">show json</button>
 <script>
     function showJson(){
     //json表达单个对象
-    var obj = {
+    /*var obj = {
         "username":"wangweichaoo",
         "age":18,
     }
-    console.log('name is' + obj.username)
+    console.log('name is' + obj.username)*/
+
+    //json表达多个对象
+    var json_arr = [
+        {
+            "uname":"gxn",
+            "age":18
+        },
+        {
+            "uname":"wangwc",
+            "age":20
+        }
+    ]
+
+    $.each(json_arr,function(i,obj){
+        console.log('uname is '+obj.uname)
+    });
     }
+
+
 </script>
 </body>
 </html>
