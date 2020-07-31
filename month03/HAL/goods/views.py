@@ -29,7 +29,7 @@ def index(request):
         #  累加所有商品的数量
         cart_goods_count = cart_goods_count + int(goods_num)
 
-    return render(request, 'index.html', locals())
+    return render(request, 'goods/index.html', locals())
     # return render(request,'index.html',{'categories':categories,
     #                                     'cart_goods_list':cart_goods_list,
     #                                     'cart_goods_count':cart_goods_count})
@@ -58,7 +58,7 @@ def detail(request):
     goods_id = request.GET.get('id', 1)
     goods_data = GoodsInfo.objects.get(id=goods_id)
 
-    return render(request, 'detail.html', locals())
+    return render(request, 'goods/detail.html', locals())
 
 
 def goods(request):

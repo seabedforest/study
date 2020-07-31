@@ -15,9 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from . import views
+from goods.views import detail
+from cart.views import add_cart, show_cart, remove_cart, place_order, submit_order, submit_success
+from django.conf.urls.static import static
+from django.conf import settings
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('goods.urls')),
-    path('base_foot', views.base_foot),
+    path('cart/add_cart/', add_cart),  # 添加到购物车
+    path('goods/', include('goods.urls')),  # 商品分类页面
+    path('cart/show_cart/', show_cart),  # 购物车页面
+    path('cart/remove_cart/', remove_cart),  # 购物车删除页面
+    path('cart/place_order/', place_order),  # 提交订单页面显示
+    path('cart/submit_order/', submit_order),  # 提交订单功能
+    path('cart/submit_success/', submit_success),  # 提交订单成功
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
