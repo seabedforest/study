@@ -11,7 +11,7 @@
     <div class="navbar">
         <h1 class="fl">全部商品分类</h1>
         <ul class="navlist fl">
-            <li><a href="#">首页</a></li>
+            <li><a href="{% url 'index' %}">首页</a></li>
             <li class="interval">|</li>
             <li><a href="#">商品商城</a></li>
             <li class="interval">|</li>
@@ -50,7 +50,7 @@
         <div class="subtitle fl">
             <span>|</span>
             {% for goods in cag.goods_list %}
-            <a href="/{{ cart_goods.id }}/">{{ goods.goods_name|slice:'10' }}</a>
+            <a href="/goods/detail?id={{ cart_goods.id }}">{{ goods.goods_name|slice:'10' }}</a>
             {% endfor %}
         </div>
         <a href="/list{{ cag.id }}_1_1/" class="goods_more fr" id="fruit_more">查看更多 ></a>
@@ -61,8 +61,8 @@
         <ul class="goods_list fl">
             {% for goods in cag.goods_list %}
             <li>
-                <h4><a href="/{{ goods.id }}/">{{ goods.goods_name }}</a></h4>
-                <a href="/{{ goods.id }}/"><img src="/media/{{ goods.goods_img }}"></a>
+                <h4><a href="/goods/detail?id={{ goods.id }}">{{ goods.goods_name }}</a></h4>
+                <a href="/goods/detail?id={{ goods.id }}"><img src="/media/{{ goods.goods_img }}"></a>
                 <div class="prize"> ￥ {{ goods.goods_price }}</div>
             </li>
             {% endfor %}

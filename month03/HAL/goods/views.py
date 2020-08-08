@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import GoodsCategory,GoodsInfo
+from .models import GoodsCategory, GoodsInfo
 from django.core.paginator import Paginator
 
 
@@ -30,9 +30,7 @@ def index(request):
         cart_goods_count = cart_goods_count + int(goods_num)
 
     return render(request, 'goods/index.html', locals())
-    # return render(request,'index.html',{'categories':categories,
-    #                                     'cart_goods_list':cart_goods_list,
-    #                                     'cart_goods_count':cart_goods_count})
+
 
 
 def detail(request):
@@ -57,7 +55,7 @@ def detail(request):
     # 获取传过来的商品的id
     goods_id = request.GET.get('id', 1)
     goods_data = GoodsInfo.objects.get(id=goods_id)
-
+    news = goods_data.goods_cag.goodsinfo_set.order_by('-id')[0:2]
     return render(request, 'goods/detail.html', locals())
 
 
@@ -95,4 +93,3 @@ def goods(request):
                                           'cart_goods_count': cart_goods_count,
                                           'paginator': paginator,
                                           'cag_id': cag_id})
-

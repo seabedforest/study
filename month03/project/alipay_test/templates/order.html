@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打赏页面</title>
+</head>
+<body>
+<script src="/static/js/jquery.min.js"></script>
+<h3>哈哈哈</h3>
+<button id="btn">打赏</button>
+<script>
+    //获取文章id,金额
+    post_data = {"topic_id":1,"cost_id":1}
+    $(function(){
+        $('#btn').click(function(){
+            $.ajax({
+                url: "http://127.0.0.1:8000/order",
+                type:"POST",
+                contentType:"application/json",
+                dataType:"json",
+                data:JSON.stringify(post_data),
+                success:function(res){
+                    //把用户跳转至支付宝
+                    window.location=res.pay_url
+                },
+            })
+        })
+    })
+</script>
+</body>
+</html>

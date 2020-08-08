@@ -1,4 +1,4 @@
-{% extends 'df_goods/base.html' %}
+{% extends 'goods/base.html' %}
 
 {% block head %}
     <script type="text/javascript">
@@ -52,15 +52,17 @@
 
 {% block center_content %}
 	<div class="goods_detail_con clearfix">
-		<div class="goods_detail_pic fl"><img src="{{ MEDIA_URL }}{{ goods.gpic }}"></div>
+		<div class="goods_detail_pic fl">
+			<img src="{{ MEDIA_URL }}{{ goods_data.goods_img }}">
+		</div>
 
 		<div class="goods_detail_list fr">
-			<h3>{{ goods.gtitle }}</h3>
-			<p>{{ goods.gjianjie }}</p>
+			<h3>{{ goods_data.goods_name }}</h3>
+			<p>{{ goods_data.goods_desc }}</p>
 			<div class="prize_bar">
-				<span class="show_pirze">¥<em id="gprice">{{ goods.gprice }}</em></span>
-				<span class="show_unit">单  位：{{ goods.gunit }}</span>
-				<span class="show_unit">库  存：<span class="goods_kucun">{{ goods.gkucun }}</span></span>
+				<span class="show_pirze">¥<em id="gprice">{{ goods_data.goods_price }}</em></span>
+				<span class="show_unit"></span>
+				<span class="show_unit">库  存：<span class="goods_kucun">{{ goods_data.goods_inventory }}</span></span>
 			</div>
 			<div class="goods_num clearfix">
 				<div class="num_name fl">数 量：</div>
@@ -70,17 +72,17 @@
 					<a href="javascript:minus();" class="minus fr">-</a>
 				</div>
 			</div>
-			<div class="total">总价：<em id="gtotal">{{ goods.gprice }}元</em></div>
+			<div class="total">总价：<em id="gtotal">{{ goods_data.goods_price }}元</em></div>
 			<div class="operate_btn">
                 {% if request.session.user_name|default:'' != '' %}
                     <a href="javascript:;" class="buy_btn" id="buy_now">立即购买</a>
                 {% else %}
-                    <a href="{% url "df_user:login" %}" class="buy_btn">立即购买</a>
+                    <a href="#" class="buy_btn">立即购买</a>
                 {% endif %}
                 {% if request.session.user_name|default:'' != '' %}
                     <a href="javascript:;" class="add_cart" id="add_cart">加入购物车</a>
                 {% else %}
-                    <a href="{% url "df_user:login" %}" class="add_cart" id="add_cart">加入购物车</a>
+                    <a href="#" class="add_cart" id="add_cart">加入购物车</a>
                 {% endif %}
 			</div>
 		</div>
@@ -93,9 +95,9 @@
 				<ul>
                     {% for goods in news %}
 					<li>
-						<a href="/{{ goods.id }}"><img src="{{ MEDIA_URL }}{{ goods.gpic }}"></a>
-						<h4><a href="#">{{ goods.gtitle }}</a></h4>
-						<div class="prize">￥{{ goods.gprice }}</div>
+						<a href="/{{ goods.id }}"><img src="{{ MEDIA_URL }}{{ goods.goods_img }}"></a>
+						<h4><a href="#">{{ goods.goods_name }}</a></h4>
+						<div class="prize">￥{{ goods.goods_price }}</div>
 					</li>
                     {%  endfor %}
                 </ul>
@@ -111,7 +113,7 @@
 			<div class="tab_content">
 				<dl>
 					<dt>商品详情：</dt>
-					<dd>{{ goods.gcontent|safe }}</dd>
+					<dd>{{ goods_data.goods_desc|safe }}</dd>
 				</dl>
 			</div>
 

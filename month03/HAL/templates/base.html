@@ -6,15 +6,18 @@
 		<div class="header">
 			<div class="welcome fl">欢迎来到瞎几把玩!</div>
 			<div class="fr">
+				{% if request.session.user_name|default:'' != '' %}
 				<div class="login_btn fl">欢迎您：<em>{{ request.session.user_name }}</em>
                     <span>|</span>
                     <em><a href="#">退出</a></em>
 				</div>
+				{% else %}
 				<div class="login_btn fl">
 					<a href="#">登录</a>
 					<span>|</span>
 					<a href="#">注册</a>
 				</div>
+				{% endif %}
 				<div class="user_link fl">
 					<span>|</span>
 					<a href="#">用户中心</a>
@@ -51,13 +54,10 @@
 			<input type="text" class="input_text fl" name="q" placeholder="搜索商品">
 			<input type="button" class="input_btn fr" name="" value="搜索">
 		</div>
-
-        {% if guest_cart == 1 %}
             <div class="guest_cart fr">
                 <a href="#" class="cart_name fl">我的购物车</a>
-                <div class="goods_count fl" id="show_count">{{ cart_num }}</div>
+                <div class="goods_count fl" id="show_count">{{ cart_goods_count }}</div>
             </div>
-        {% endif %}
 	</div>
 
 
