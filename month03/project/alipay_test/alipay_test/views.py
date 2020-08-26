@@ -56,7 +56,7 @@ class OrderView(MyAliPay):
 
     def post(self, request):
         # 获取支付地址
-        order_id = '101012389124'
+        order_id = '101012389135'
         ammount = 999
         pay_url = self.get_tarde_url(order_id, ammount)
         return JsonResponse({'pay_url': pay_url})
