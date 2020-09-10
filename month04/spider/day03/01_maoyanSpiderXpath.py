@@ -1,8 +1,12 @@
 """
-抓取猫眼电影信息
+猫眼电影top100数据抓取
+流程:
+    1、右键 - 查看网页源代码 - 搜索关键字是否存在
+    2、存在的情况下，查看URL地址的规律
+    3、尝试写正则表达式
+    4、写代码
 """
 import requests
-import re
 import time
 import random
 from lxml import etree
@@ -28,18 +32,9 @@ class MaoyanSpider:
         for dd in dd_list:
             item = {}
             item['name'] = dd.xpath('.//p[@class="name"]/a/text()')[0]
-            item['str'] = dd.xpath('.//p[@class="str"]/text()')[0].strip()
+            item['str'] = dd.xpath('.//p[@class="star"]/text()')[0].strip()
             item['time'] = dd.xpath('.//p[@class="releasetime"]/text()')[0].strip()
             print(item)
-            
-    # def save_html(self, result):
-    #     """数据处理函数"""
-    #     for rt in result:
-    #         item = {}
-    #         item['name'] = rt[0].strip()
-    #         item['str'] = rt[1].strip()
-    #         item['time'] = rt[2].strip()
-    #         print(item)
 
     def run(self):
         """程序入口函数"""

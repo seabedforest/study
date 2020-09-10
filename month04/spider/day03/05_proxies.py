@@ -8,4 +8,5 @@ proxies = {
     'https': 'https://171.13.4.154:9999',
 }
 html = requests.get(url=url, proxies=proxies, headers=headers).text
+# 确认方法: 查看html中的origin中的IP地址是哪个
 print(html)
