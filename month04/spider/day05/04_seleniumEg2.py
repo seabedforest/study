@@ -10,3 +10,6 @@ driver.get('http://www.baidu.com')
 driver.find_element_by_xpath('//*[@id="kw"]').send_keys('赵丽颖')
 # 找到 百度一下  按钮节点 点击
 driver.find_element_by_xpath('//*[@id="su"]').click()
+
+# 关闭浏览器
+# driver.quit()

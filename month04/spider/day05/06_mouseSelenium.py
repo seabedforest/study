@@ -2,11 +2,13 @@
     selenium操作鼠标
 """
 from selenium import webdriver
+# 导入鼠标事件类
 from selenium.webdriver import ActionChains
 import time
 
 # 1 打开浏览器，输入百度
 driver = webdriver.Chrome()
+driver.maximize_window()
 driver.get(url='http://www.baidu.com')
 # 2.找到右上角 设置 节点
 set_node = driver.find_element_by_xpath('//*[@id="s-usersetting-top"]')
